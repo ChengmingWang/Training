@@ -11,7 +11,7 @@ for fruit in fruits:
     print fruit,
 
 #while循环
-#raw_input可以接收任何类型，input只能接收数字类型
+
 # r=random.uniform(1,10)
 # print r
 # input1=input("\nPlease input:\n")
@@ -27,7 +27,7 @@ for fruit in fruits:
 #或者
 r=random.uniform(1,10)
 print r
-#raw_input需要转换类型再比较结果才准确
+#raw_input把所有输入当作字符串,需要转换类型再比较结果才准确
 input1=int(raw_input("\nPlease input:\n"))
 while True:
     if input1>r:

@@ -13,12 +13,12 @@ class Factory:
 
 class ProductA(Product):
     "a derived class of product class"
-    def __init__(self,attr1,att2):
+    def __init__(self,attr1,attr2):
         self.attr1=attr1
-        self.attr2=att2
+        self.attr2=attr2
 
     def show_attr(self):
-        print self.attr1+self.attr2
+        print self.attr1 + self.attr2
 
 
 class ProductB(Product):
@@ -27,7 +27,7 @@ class ProductB(Product):
         self.attr=attr
 
     def show_attr(self):
-        print self.attr*2
+        print self.attr * 2
 
 
 class FactoryA(Factory):
