@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#{% if %} 标签检查(evaluate)一个变量，如果这个变量为真（即，变量存在，非空，不是布尔值假），系统会显示在 {% if %} 和 {% endif %} 之间的任何内容，#}
+{#一定要用 {% endif %} 关闭每一个 {% if %} 标签。#}
+
+{%for athlete in athlete_list %}
+    <li>{{ athlete.name }}</li>
+{% endfor %}
+{#Django不支持退出循环操作。 如果我们想退出循环，可以改变正在迭代的变量，让其仅仅包含需要迭代的项目。#}
+{#同理，Django也不支持continue语句，我们无法让当前迭代操作跳回到循环头部。 （请参看本章稍后的理念和限制小节，了解下决定这个设计的背后原因）#}
+{#在每个`` {% for %}``循环里有一个称为`` forloop`` 的模板变量。这个变量有一些提示循环进度信息的属性。#}
+{#forloop.counter0 类似于 forloop.counter ，但是它是从0计数的。 第一次执行循环时这个变量会被设置为0。#}
+{#forloop.revcounter 是表示循环中剩余项的整型变量。 在循环初次执行时 forloop.revcounter 将被设置为序列中项的总数。 最后一次循环执行中，这个变量将被置1。#}
+{#forloop.revcounter0 类似于 forloop.revcounter ，但它以0做为结束索引。 在第一次执行循环时，该变量会被置为序列的项的个数减1。#}
+{#forloop.first 是一个布尔值，如果该迭代是第一次执行，那么它被置为```` 在下面的情形中这个变量是很有用的：#}
+{% for object in objects %}
+    {% if forloop.first %}<li class="first">{% else %}<li>{% endif %}
+    {{ object }}
+    </li>
+{% endfor %}
+{#forloop 变量仅仅能够在循环中使用。 在模板解析器碰到{% endfor %}标签后，forloop就不可访问了。#}
+
+{#{% ifequal %} 标签比较两个值，当他们相等时，显示在 {% ifequal %} 和 {% endifequal %} 之中所有的值。#}
+{% ifequal user1 user2 %}
+    <h1>Welcome!</h1>
+{% endifequal %}
+
+{#就像HTML或者Python，Django模板语言同样提供代码注释。 注释使用 {# #} ：#}
+{# This is a comment #}
+{#多行注释#}
+{% comment %}
+This is a
+multi-line comment.
+{% endcomment %}
+
+{#模板过滤器是在变量被显示前修改它的值的一个简单方法。 过滤器使用管道字符，#}
+{#转换文本为小写#}
+{{ name|lower }}
+{#查找列表的第一个元素并将其转化为大写#}
+{{ my_list|first|upper }}
+{#显示变量 bio 的前30个词。#}
+{{ bio|truncatewords:"30" }}
+{#addslashes : 添加反斜杠到任何反斜杠、单引号或者双引号前面。 这在处理包含JavaScript的文本时是非常有用的。#}
+{#date : 按指定的格式字符串参数格式化 date 或者 datetime 对象#}
+{{ pub_date|date:"F j, Y" }}
+{#length : 返回变量的长度。 对于列表，这个参数将返回列表元素的个数。 #}
+{#对于字符串，这个参数将返回字符串中字符的个数。 你可以对列表或者字符串，或者任何知道怎么测定长度的Python 对象使用这个方法（也就是说，有 __len__() 方法的对象）。#}
+</body>
+</html>
