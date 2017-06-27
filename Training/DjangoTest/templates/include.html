@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#内建模板标签： {% include %} 。该标签允许在（模板中）包含其它的模板的内容。 #}
+{#标签的参数是所要包含的模板名称，可以是一个变量，也可以是用单/双引号硬编码的字符串。 #}
+{#每当在多个模板中出现相同的代码时，就应该考虑是否要使用 {% include %} 来减少重复。#}
+{% include "includes/nav.html" %}
+</body>
+</html>
