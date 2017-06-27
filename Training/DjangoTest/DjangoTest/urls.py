@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from views import hello,get_current_time,hours_ahead
+from views import hello,get_current_time,hours_ahead,search_form,search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello$', hello),
     url(r'^time$',get_current_time),
+    url(r'^search-form/$', search_form),
+url(r'^search/$', search),
     url(r'^time/plus/(\d{1,2})',hours_ahead),# 1-2位的数字,
 # 正则表达式字符串的开头字母“r”。 它告诉Python这是个原始字符串，不需要处理里面的反斜杠（转义字符）。
 # 在普通Python字符串中，反斜杠用于特殊字符的转义。比如n转义成一个换行符。
