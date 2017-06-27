@@ -5,8 +5,14 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 def current_datetime(request):
     now = datetime.datetime.now()
+<<<<<<< HEAD
     # t=Template("<p>{{date}}<p>")
     t = get_template("current_datetime.html")
+=======
+    fp = open('/home/djangouser/templates/tag.html')
+    t = Template(fp.read())
+    fp.close()
+>>>>>>> adfaddf580b3b2a83be14e6bf28355782b2fcb8e
     html = t.render(Context({'current_date': now}))
     return HttpResponse(html)
 

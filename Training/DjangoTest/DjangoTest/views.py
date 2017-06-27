@@ -21,3 +21,13 @@ def hours_ahead(request,offset):#捕获值永远都是字符串（string）类�
     html = "<html><body>In %s hour(s), it will be %s.</body></html>" % (offset, dt)
     return HttpResponse(html)
 
+from django.shortcuts import render_to_response
+def search_form(request):
+    return render_to_response('search_form.html')
+
+def search(request):
+    if 'q' in request.GET:
+        message = 'You searched for: %r' % request.GET['q']
+    else:
+        message = 'You submitted an empty form.'
+    return HttpResponse(message)

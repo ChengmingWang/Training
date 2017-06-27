@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    **{% if error %}**
+        **<p style="color: red;">Please submit a search term.</p>**
+    **{% endif %}**
+    <form action="" method="get">{#action=”“意味着表单将提交给与当前页面相同的URL。 这样修改之后，如果search()视图不指向其它页面的话，你将不必再修改action。#}
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
