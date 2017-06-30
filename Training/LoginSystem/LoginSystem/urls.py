@@ -1,4 +1,4 @@
-"""Login URL Configuration
+"""LoginSystem URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from MyApp.views import login,regist,index,logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/$', login, name='login'),
+    url(r'^regist/$', regist, name='regist'),
+    url(r'^index/$', index, name='index'),
+    url(r'^logout/$', logout, name='logout'),
 ]

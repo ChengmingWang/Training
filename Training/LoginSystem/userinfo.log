@@ -1,0 +1,23 @@
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:a,datetime:2017-06-30 01:57:18
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:a,datetime:2017-06-30 01:57:26
+ip:127.0.0.1,url:127.0.0.1:8000/index/,user:ddd,datetime:2017-06-30 01:57:26
+ip:127.0.0.1,url:127.0.0.1:8000/index/,user:ddd,datetime:2017-06-30 02:06:23
+ip:127.0.0.1,url:127.0.0.1:8000/logout/,user:ddd,datetime:2017-06-30 02:06:25
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:06:25
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:09:54
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:09:55
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:09:56
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:09:56
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:09:56
+ip:127.0.0.1,url:127.0.0.1:8000/login/,user:no user,datetime:2017-06-30 02:10:03
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:16:58
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:27
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:27
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:28
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:28
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:38
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 02:17:49
+ip:127.0.0.1,url:127.0.0.1:8000/,user:no user,datetime:2017-06-30 03:08:07
+ip:127.0.0.1,url:127.0.0.1:8000/,user:no user,datetime:2017-06-30 03:08:07
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 03:08:13
+ip:127.0.0.1,url:127.0.0.1:8000/regist/,user:no user,datetime:2017-06-30 03:08:20

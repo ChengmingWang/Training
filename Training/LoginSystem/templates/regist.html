@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>register</title>
+</head>
+
+<body>
+<h1>register page：</h1>
+<form method = 'post' enctype="multipart/form-data">
+    {% csrf_token %}{#for post rquest #}
+    {{uf.as_p}}
+    <input type="submit" value = "ok" />
+</form>
+<br>
+<a href="http://127.0.0.1:8000/login/">login</a>
+</body>
+</html>
