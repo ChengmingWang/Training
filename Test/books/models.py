@@ -15,10 +15,15 @@ class Author(models.Model):
     last_name = models.CharField(max_length=40)
     email = models.EmailField()
 
-
 class Book(models.Model):
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)#
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
 
+
+def add_publisher():
+    p1=Publisher.objects.create(name="a",address="adf")
+
+def get_publishers():
+    return Publisher.objects.filter(name="b",address="adf").exclude(website='dsfdsfsdf')
